@@ -15,7 +15,7 @@ TODO: A custom bottom navigation bar with Card. This is inspired from some of th
 
 
 ## Example Code
-<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" />
+<center><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" /></center>>
 
 ## Usage
 
