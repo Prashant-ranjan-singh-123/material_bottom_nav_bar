@@ -13,14 +13,9 @@ and the Flutter guide for
 
 TODO: A custom bottom navigation bar with Card. This is inspired from some of the earlier designs, but in a more simplified and yet exiting way.
 
-## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Demo
+<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" />
 
 ## Usage
 
