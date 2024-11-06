@@ -14,7 +14,7 @@ and the Flutter guide for
 TODO: A custom bottom navigation bar with Card. This is inspired from some of the earlier designs, but in a more simplified and yet exiting way.
 
 
-## Demo
+## Example Code
 <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" />
 
 ## Usage
