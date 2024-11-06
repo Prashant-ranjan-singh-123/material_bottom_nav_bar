@@ -11,8 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+TODO: A custom bottom navigation bar with Card. This is inspired from some of the earlier designs, but in a more simplified and yet exiting way.
 
 ## Features
 
