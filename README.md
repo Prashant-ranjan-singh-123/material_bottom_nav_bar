@@ -15,7 +15,7 @@ TODO: A custom bottom navigation bar with Card. This is inspired from some of th
 
 
 ## Example Code
-<center><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" /></center>>
+<center><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" /></center>
 
 ## Usage
 
@@ -23,7 +23,42 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
-const like = 'sample';
+bottomNavigationBar: MaterialBottomNavBar(
+currentIndex: _current_page,
+onTap: (int index) => {
+setState(() {
+_current_page = index;
+})
+},
+cardColor: Colors.white,
+cardShadowColor: Colors.white,
+cardElevation: 20,
+items: [
+NavBarItem(
+selectedIcon: const Icon(Icons.home, color: Colors.black),
+unSelectedIcon: const Icon(Icons.home_outlined),
+label: 'Home',
+),
+NavBarItem(
+selectedIcon: const Icon(Icons.search_outlined, color: Colors.black),
+unSelectedIcon: const Icon(Icons.search_outlined),
+label: 'Search',
+),
+NavBarItem(
+selectedIcon: const Icon(
+Icons.shopping_cart,
+color: Colors.black,
+),
+unSelectedIcon: const Icon(Icons.shopping_cart_outlined),
+label: 'Cart',
+),
+NavBarItem(
+selectedIcon: const Icon(Icons.person, color: Colors.black),
+unSelectedIcon: const Icon(Icons.person_outline),
+label: 'Profile',
+),
+],
+)
 ```
 
 ## Additional information
