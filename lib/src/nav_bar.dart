@@ -1,89 +1,104 @@
 import 'package:flutter/material.dart';
-
 import '../model/item_model.dart';
 
 class MaterialBottomNavBar extends StatefulWidget {
-  List<NavBarItem> items;
-  int currentIndex;
-  Function(int index)? onTap;
-  TextStyle selectedLabelStyle;
-  TextStyle unselectedLabelStyle;
-  Color cardColor;
-  Color backgroundColor;
-  EdgeInsetsGeometry cardInternalPadding;
-  double cardElevation;
-  bool showSelectedLabels;
-  bool showUnselectedLabels;
-  Color cardShadowColor;
-  double selectedFontSize;
-  double unselectedFontSize;
-  double materialBottomNavBarElevation;
-  MaterialBottomNavBar(
-      {super.key,
-      required this.items,
-      this.currentIndex = 0,
-      this.onTap,
-      this.backgroundColor = Colors.black,
-      this.cardElevation = 15,
-      this.selectedLabelStyle = const TextStyle(color: Colors.white),
-      this.unselectedLabelStyle = const TextStyle(color: Colors.white),
-      this.cardColor = Colors.white,
-      this.showSelectedLabels = true,
-      this.showUnselectedLabels = true,
-      this.cardShadowColor = Colors.white,
-      this.materialBottomNavBarElevation = 0,
-      this.selectedFontSize = 15,
-      this.unselectedFontSize = 12,
-      this.cardInternalPadding =
-          const EdgeInsets.symmetric(horizontal: 15, vertical: 8)})
-      : assert(currentIndex >= 0 && currentIndex <= items.length,
-            'Current index should be greater then 0 and less then items.length');
+  final List<NavBarItem> items;
+  final int currentIndex;
+  final Function(int index)? onTap;
+  final TextStyle selectedLabelStyle;
+  final TextStyle unselectedLabelStyle;
+  final Color cardColor;
+  final Color backgroundColor;
+  final EdgeInsetsGeometry cardInternalPadding;
+  final double cardElevation;
+  final bool showSelectedLabels;
+  final bool showUnselectedLabels;
+  final Color cardShadowColor;
+  final double selectedFontSize;
+  final double unselectedFontSize;
+  final double materialBottomNavBarElevation;
+
+  const MaterialBottomNavBar({
+    super.key,
+    required this.items,
+    this.onTap,
+    this.backgroundColor = Colors.black,
+    this.cardElevation = 15,
+    this.currentIndex =0,
+    this.selectedLabelStyle = const TextStyle(color: Colors.white),
+    this.unselectedLabelStyle = const TextStyle(color: Colors.white),
+    this.cardColor = Colors.white,
+    this.showSelectedLabels = true,
+    this.showUnselectedLabels = true,
+    this.cardShadowColor = Colors.white,
+    this.materialBottomNavBarElevation = 0,
+    this.selectedFontSize = 15,
+    this.unselectedFontSize = 12,
+    this.cardInternalPadding =
+    const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+  });
 
   @override
   State<MaterialBottomNavBar> createState() => _MaterialBottomNavBarState();
 }
 
 class _MaterialBottomNavBarState extends State<MaterialBottomNavBar> {
+  int currentIndex = 0; // Move currentIndex to the state class.
+
+  @override
+  void initState() {
+    super.initState();
+    currentIndex = widget.currentIndex;
+  }
+
   @override
   Widget build(BuildContext context) {
     return _buildBottomNavigationBar(
-        currentIndex: widget.currentIndex, context: context);
+      currentIndexIs: currentIndex,
+      context: context,
+    );
   }
 
-  Widget _buildBottomNavigationBar(
-      {required int currentIndex, required BuildContext context}) {
+  Widget _buildBottomNavigationBar({
+    required int currentIndexIs,
+    required BuildContext context,
+  }) {
     return Theme(
-        data: ThemeData(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: widget.backgroundColor,
-          type: BottomNavigationBarType.fixed,
-          currentIndex: currentIndex,
-          selectedLabelStyle: widget.selectedLabelStyle,
-          unselectedLabelStyle: widget.unselectedLabelStyle,
-          selectedItemColor: widget.selectedLabelStyle.color,
-          unselectedItemColor: widget.unselectedLabelStyle.color,
-          showSelectedLabels: widget.showSelectedLabels,
-          showUnselectedLabels: widget.showUnselectedLabels,
-          selectedFontSize: widget.selectedFontSize,
-          unselectedFontSize: widget.unselectedFontSize,
-          elevation: widget.materialBottomNavBarElevation,
-          onTap: (index) {
+      data: ThemeData(
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+      ),
+      child: BottomNavigationBar(
+        backgroundColor: widget.backgroundColor,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndexIs,
+        selectedLabelStyle: widget.selectedLabelStyle,
+        unselectedLabelStyle: widget.unselectedLabelStyle,
+        selectedItemColor: widget.selectedLabelStyle.color,
+        unselectedItemColor: widget.unselectedLabelStyle.color,
+        showSelectedLabels: widget.showSelectedLabels,
+        showUnselectedLabels: widget.showUnselectedLabels,
+        selectedFontSize: widget.selectedFontSize,
+        unselectedFontSize: widget.unselectedFontSize,
+        elevation: widget.materialBottomNavBarElevation,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+          if (widget.onTap != null) {
             widget.onTap!(index);
-            setState(() {
-              widget.currentIndex = index;
-            });
-          },
-          items: widget.items.map((item) {
-            return _buildBottomNavigationBarItem(item: item);
-          }).toList(),
-        ));
+          }
+        },
+        items: widget.items.map((item) {
+          return _buildBottomNavigationBarItem(item: item);
+        }).toList(),
+      ),
+    );
   }
 
-  BottomNavigationBarItem _buildBottomNavigationBarItem(
-      {required NavBarItem item}) {
+  BottomNavigationBarItem _buildBottomNavigationBarItem({
+    required NavBarItem item,
+  }) {
     return BottomNavigationBarItem(
       icon: Card(
         color: Colors.transparent,
