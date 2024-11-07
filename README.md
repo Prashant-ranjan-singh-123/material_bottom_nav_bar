@@ -15,7 +15,35 @@ I recently saw the Play Store's bottom navigation bar and decided to create a si
 
 
 ## Example Code
-<center><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="500" /></center>
+
+<div style="text-align: center">
+    <table>
+        <tr>
+            <td style="text-align: center">
+                <a href="https://bloclibrary.dev/tutorials/flutter-counter">
+                    <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/demo.gif" width="200"/>
+                </a>
+            </td>            
+            <td style="text-align: center">
+                <a href="https://bloclibrary.dev/tutorials/flutter-infinite-list">
+                    <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/img.png" width="200"/>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <a href="https://bloclibrary.dev/tutorials/github-search">
+                    <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/img_2.png" width="200"/>
+                </a>
+            </td>
+            <td style="text-align: center">
+                <a href="https://bloclibrary.dev/tutorials/flutter-weather">
+                    <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/material_bottom_nav_bar/refs/heads/main/example/material_bottom_nav_bar_example/readme_things/img_3.png" width="200"/>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
 
 ## How To Use
 
