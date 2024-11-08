@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.2
 
-* Updated with flutter 3.24 
+* Some Readme changes to better understand this package
