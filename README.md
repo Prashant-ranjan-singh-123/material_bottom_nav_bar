@@ -8,7 +8,7 @@ For information about how to write a good package README, see the guide for
 For general information about developing packages, see the Dart guide for
 [creating packages](https://dart.dev/guides/libraries/create-packages)
 and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages)
+[developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
 I recently saw the Play Store's bottom navigation bar and decided to create a similar one for Flutter. Using a reusable solution from Pub.dev can make integration much easier than designing it from scratch.
